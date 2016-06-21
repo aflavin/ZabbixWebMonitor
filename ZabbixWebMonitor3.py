@@ -202,7 +202,7 @@ def createnewhosts():
         except ZabbixAPIException as error:
             print("Error creating host:", h['hostid'], '\n', error)
         else:
-            print("New host", h['hostid'], 'successfully created.')
+            print("New host  '" + str(h['hostid']) + "' successfully created.")
 
 
 def writewebrecord(datacon):
@@ -238,11 +238,25 @@ def writewebrecord(datacon):
                     'status_codes': data['status_codes']
                 }]
             )
-            print(data["*name"], "created.")
+            print("Web scenario '" + str(data["*name"]) + "' created.")
         except ZabbixAPIException as error:
-            print("Error creating web scenario", data["*name"], ":\n", error)
+            print("Error creating web scenario '" + str(data["*name"]) + "':\n", error)
         except KeyError as error:
             print("Error creating web scenario: host does not exist.\n", error)
+        else:
+            try:
+                z.trigger.create(
+                    description=data['*name'] + "failed: {ITEM.VALUE}",
+                    expression='{' + data['hostid'] + ":web.test.fail[" + data['*name'] + "].last()}>0 and " + \
+                               '{' + data['hostid'] + ":web.test.error[" + data['*name'] + "].strlen()}<>0",
+                    comment=data['hostid'] + ":web.test.error[" + data['*name'] + "]}",
+                    priority='4',
+                    url='http://{$MYIP}/zabbix/events.php?triggerid={TRIGGERID}&filter_set=1&time=86400'
+                )
+            except ZabbixAPIException as error2:
+                print("Error creating trigger:\n", error2)
+            else:
+                print("Availability trigger for '" + str(data['*name']) + "' created.")
     else:
         print("Complete.")
 
@@ -326,10 +340,10 @@ if __name__ == '__main__':
             checkhosts(data2)
             print(str(len(data2)), "records loaded.\nExisting hosts:")
             for i in existinghosts:
-                print('Host:', i['hostid'], 'Group:', i['groupid'], 'Scenario:', i['*name'])
+                print('Host:   ', i['hostid'], '   Group:   ', i['groupid'], '   Scenario:   ', i['*name'])
             print("New hosts:")
             for j in newhosts:
-                print('Host:', j['hostid'], 'Group:', j['groupid'], 'Scenario:', j['*name'])
+                print('Host:   ', j['hostid'], '   Group:   ', j['groupid'], '   Scenario:   ', j['*name'])
             print("Ready to write to Zabbix server?")
             y = 1
             while y == 1:
