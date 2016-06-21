@@ -54,11 +54,57 @@ def validateserver(server):
         return False
 
 
-def getiddict(dictname):
+def getiddict(dictname1):
     """Pulls all hostids and names from the Zabbix server and creates a dictionary mapping names to ids."""
+    if isinstance(dictname1, dict):
+        try:
+            for h in z.host.get(output="extend"):
+                dictname1[h['name']] = h['hostid']
+        except ZabbixAPIException as error:
+            print(error)
+    else:
+        print("Must pass dict variable.")
+        sys.exit(2)
+    return
+
+
+def getgroupdict(dictname):
+    """Pulls all group ids and names from the Zabbix server and creates a dictionary mapping names to ids.
+
+    Sets default group to add hosts, starting with a hierarchy of common names then moving to specifying
+    or creating a new group.
+    """
     if isinstance(dictname, dict):
-        for h in z.host.get(output="extend"):
-            dictname[h['name']] = h['hostid']
+        try:
+            for g in z.hostgroup.get(output="extend"):
+                dictname[g['name']] = g['groupid']
+        except ZabbixAPIException as error:
+            print(error)
+        if "Web Hosts" in dictname.keys():
+            default['groupid'] = dictname['Web Hosts']
+        elif "Web hosts" in dictname.keys():
+            default['groupid'] = dictname['Web hosts']
+        elif "Discovered hosts" in dictname.keys():
+            default['groupid'] = dictname['Discovered hosts']
+        else:
+            newgroup = input("Default group for new hosts:")
+            if newgroup in dictname.keys():
+                default['groupid'] = dictname[newgroup]
+            else:
+                print("Create this group?", newgroup)
+                x = 1
+                while x == 1:
+                    yesno = input("y/n:")
+                    if yesno == 'y' or yesno == 'yes' or yesno == 'Y' or yesno == 'Yes':
+                        if creategroup(newgroup):
+                            try:
+                                for k in z.hostgroup.get(output="extend"):
+                                    if k['name'] == newgroup:
+                                        default['groupid'] = k['groupid']
+                            except ZabbixAPIException as error1:
+                                print(error1)
+                    elif yesno == 'n' or yesno == 'no' or yesno == 'N' or yesno == 'No':
+                        sys.exit(3)
     else:
         print("Must pass dict variable.")
         sys.exit(2)
@@ -75,8 +121,18 @@ def idschange(listname, dictname):
         if isinstance(item, list):
             idschange(item, dictname)
         elif item in dictname.keys():
+            existinghostname.append(item)
             listname[index] = dictname[item]
+            existinghostid.append(dictname[item])
     return
+
+
+def groupidschange(listname, dictname):
+    for index, item in enumerate(listname):
+        if isinstance(item, list):
+            groupidschange(item, dictname)
+        elif item in dictname.keys():
+            listname[index] = dictname[item]
 
 
 def getopenfilepath():
@@ -86,7 +142,7 @@ def getopenfilepath():
 
 
 def readcsvfile(listname):
-    """Parses the CSV file and determines if it has a header, then imports it row by row."""
+    """Parses the CSV file and determines if it has a header."""
     with open(getopenfilepath(), 'r', newline='') as result:
         dialect = csv.Sniffer().sniff(result.read(2048))
         result.seek(0)
@@ -102,17 +158,22 @@ def validatewithheader(listname):
     """Checks to see if the CSV header matches the default header. Prepares dictionaries to be written to server."""
     error = False
     ids = {}
+    groupids = {}
     data = []
     header = listname[0]
     defaultheader = list(default.keys())
     if sorted(defaultheader) == sorted(header):
         content = listname[1:]
         getiddict(ids)
+        getgroupdict(groupids)
         idschange(content, ids)
+        groupidschange(content, groupids)
         rowcount1 = 0
         for row in content:
             rowcount1 += 1
             datarow = dict(zip(header, row))
+            if datarow['hostid'] not in existinghostid:
+                newhost.append(datarow['hostid'])
             for key in datarow.keys():
                 if datarow[key] == '':
                     datarow[key] = default[key]
@@ -124,7 +185,13 @@ def validatewithheader(listname):
             if error:
                 sys.exit(2)
             else:
-                print(rowcount1, "record(s) loaded. Ready to write to Zabbix server?")
+                print(rowcount1, "record(s) loaded.\nNew hosts:")
+                for i in newhost:
+                    print(i)
+                print("Existing hosts:")
+                for j in existinghostname:
+                    print(j)
+                print("Ready to write to Zabbix Server?")
                 x = 1
                 while x == 1:
                     yesno = input("y/n:")
@@ -136,6 +203,38 @@ def validatewithheader(listname):
         print("Header mismatch. Please ensure .csv header matches the header configured in this file.")
         print(sorted(defaultheader))
         sys.exit(2)
+
+
+def creategroup(groupname):
+    try:
+        z.hostgroup.create(name=groupname)
+    except ZabbixAPIException as error:
+        print("Error creating group:\n", error)
+        return False
+    else:
+        return True
+
+
+def createhost(datacon):
+    for record in datacon:
+        data = record
+        try:
+            z.host.create(
+                host=data['*name'],
+                group=[{
+                    'groupid': data['groupid']
+                }],
+                interfaces=[{
+                    'type': '1',
+                    'main': '1',
+                    'useip': '1',
+                    'ip': '127.0.0.1',
+                    'dns': '',
+                    'port': '10050'
+                }]
+            )
+        except ZabbixAPIException as error:
+            print("Error creating host", data['*name'], ':\n', error)
 
 
 def writewebrecord(datacon):
@@ -183,14 +282,17 @@ if __name__ == '__main__':
     # stream = logging.StreamHandler(sys.stdout)
     # stream.setLevel(logging.DEBUG)
     # Code to write logs to a file in the directory where the script runs
-    # file = logging.FileHandler("WebMonitorImport_" + datetime.datetime.now().strftime("%Y-%m%d-%H%M"), mode='w')
-    # file.setLevel(logging.DEBUG)
-    # log = logging.getLogger('pyzabbix')
+    file = logging.FileHandler("WebMonitorImport_" + datetime.datetime.now().strftime("%Y-%m%d-%H%M") + '.log',
+                               mode='w')
+    file.setLevel(logging.DEBUG)
+    log = logging.getLogger('pyzabbix')
     # log.addHandler(stream)
-    # log.addHandler(file)
-    # log.setLevel(logging.DEBUG)
+    log.addHandler(file)
+    log.setLevel(logging.DEBUG)
     default = {
         'hostid': 'Required',
+        # CHANGE to reflect default group for server that the script is run on.
+        'groupid': 'Required',
         '*name': 'Required',
         'delay': '60',
         'retries': '1',
@@ -217,7 +319,10 @@ if __name__ == '__main__':
         'status_codes': ''
     }
     retries = 4
-    list1 = []
+    hostlist = []
+    existinghostid = []
+    existinghostname = []
+    newhost = []
     while retries >= 0:
         serverip = input("URL of zabbix server:")
         if validateserver(serverip):
@@ -234,16 +339,20 @@ if __name__ == '__main__':
             print("Too many failed attempts.")
             sys.exit(2)
     rowcount1 = 0
-    if readcsvfile(list1):
-        for row1 in list1:
+    if readcsvfile(hostlist):
+        for row1 in hostlist:
             rowcount1 += 1
         if rowcount1 == 1:
             print("The imported CSV file must have a header.\nDefault header:")
             print(sorted(default.keys()))
             sys.exit(2)
         else:
-            datalist = validatewithheader(list1)
-            writewebrecord(datalist)
+            datalist = validatewithheader(hostlist)
+            if len(newhost) > 0:
+                createhost(datalist)
+                writewebrecord(datalist)
+            else:
+                writewebrecord(datalist)
     else:
         print("The imported CSV file must have a header.\nDefault header:")
         print(sorted(default.keys()))
