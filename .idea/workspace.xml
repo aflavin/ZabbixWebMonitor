@@ -2,6 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fd29ce8-51fe-4055-ba16-ba3602546884" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ZabbixWebUpdate.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ZabbixWebUpdate2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ZabbixWebUpdate3.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebMonitorImport_2016-0620-1206" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebMonitorImport_2016-0620-1543" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebMonitorImport_2016-0620-1544" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebMonitorImport_2016-0620-1546.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebMonitorImport_2016-0620-1548.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebMonitorImport_2016-0621-1121" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebMonitorImport_2016-0621-1125.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebMonitorImport_2016-0621-1136.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebMonitorImport_2016-0621-1212.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebMonitorImport_2016-0621-1218.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebMonitorImport_2016-0621-1225.log" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ZabbixWebMonitor3.py" afterPath="$PROJECT_DIR$/ZabbixWebMonitor3.py" />
     </list>
@@ -28,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/ZabbixWebMonitor.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="78" selection-end-column="10" />
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -40,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/ZabbixWebMonitor2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="200" column="35" selection-start-line="197" selection-start-column="20" selection-end-line="200" selection-end-column="35" />
+              <caret line="197" column="31" selection-start-line="197" selection-start-column="31" selection-end-line="197" selection-end-column="31" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -48,11 +62,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZabbixWebMonitor3.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ZabbixWebMonitor3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ZabbixWebMonitor3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46703297">
-              <caret line="347" column="17" selection-start-line="347" selection-start-column="17" selection-end-line="347" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="163" column="28" selection-start-line="162" selection-start-column="16" selection-end-line="163" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZabbixWebUpdate.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ZabbixWebUpdate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="246" column="31" selection-start-line="164" selection-start-column="0" selection-end-line="246" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZabbixWebUpdate2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ZabbixWebUpdate2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZabbixWebUpdate3.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ZabbixWebUpdate3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.6208792">
+              <caret line="216" column="26" selection-start-line="216" selection-start-column="26" selection-end-line="216" selection-end-column="26" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -76,7 +126,7 @@
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="6" column="32" selection-start-line="1" selection-start-column="16" selection-end-line="6" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -86,7 +136,7 @@
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+              <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -123,9 +173,12 @@
         <option value="$PROJECT_DIR$/ZabbixWebMonitor2.py" />
         <option value="$PROJECT_DIR$/ZabbixWebMonitor.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_4" />
+        <option value="$PROJECT_DIR$/ZabbixWebMonitor3.py" />
+        <option value="$PROJECT_DIR$/ZabbixWebUpdate.py" />
+        <option value="$PROJECT_DIR$/ZabbixWebUpdate2.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3" />
-        <option value="$PROJECT_DIR$/ZabbixWebMonitor3.py" />
+        <option value="$PROJECT_DIR$/ZabbixWebUpdate3.py" />
       </list>
     </option>
   </component>
@@ -189,45 +242,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="Python" />
   </component>
-  <component name="RunManager" selected="Python.ZabbixWebMonitor3">
-    <configuration default="false" name="ZabbixWebMonitor2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ZabbixWebMonitor" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ZabbixWebMonitor2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="scratch_4" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ZabbixWebMonitor" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_4" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.ZabbixWebUpdate3">
     <configuration default="false" name="ZabbixWebMonitor3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -245,23 +264,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="scratch_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ZabbixWebMonitor" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="scratch_3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -275,6 +277,57 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ZabbixWebMonitor" />
       <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ZabbixWebUpdate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ZabbixWebMonitor" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ZabbixWebUpdate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ZabbixWebUpdate2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ZabbixWebMonitor" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ZabbixWebUpdate2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ZabbixWebUpdate3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ZabbixWebMonitor" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ZabbixWebUpdate3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -402,19 +455,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.ZabbixWebMonitor2" />
-      <item index="1" class="java.lang.String" itemvalue="Python.scratch_4" />
-      <item index="2" class="java.lang.String" itemvalue="Python.ZabbixWebMonitor3" />
-      <item index="3" class="java.lang.String" itemvalue="Python.scratch_2" />
-      <item index="4" class="java.lang.String" itemvalue="Python.scratch_3" />
+      <item index="0" class="java.lang.String" itemvalue="Python.ZabbixWebMonitor3" />
+      <item index="1" class="java.lang.String" itemvalue="Python.scratch_3" />
+      <item index="2" class="java.lang.String" itemvalue="Python.ZabbixWebUpdate" />
+      <item index="3" class="java.lang.String" itemvalue="Python.ZabbixWebUpdate2" />
+      <item index="4" class="java.lang.String" itemvalue="Python.ZabbixWebUpdate3" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.ZabbixWebMonitor3" />
+        <item index="0" class="java.lang.String" itemvalue="Python.ZabbixWebUpdate3" />
         <item index="1" class="java.lang.String" itemvalue="Python.scratch_3" />
-        <item index="2" class="java.lang.String" itemvalue="Python.scratch_2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.ZabbixWebMonitor2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.scratch_4" />
+        <item index="2" class="java.lang.String" itemvalue="Python.ZabbixWebMonitor3" />
+        <item index="3" class="java.lang.String" itemvalue="Python.ZabbixWebUpdate2" />
+        <item index="4" class="java.lang.String" itemvalue="Python.ZabbixWebUpdate" />
       </list>
     </recent_temporary>
   </component>
@@ -478,16 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -504,16 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ZabbixWebMonitor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="78" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_4">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -522,10 +555,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ZabbixWebMonitor2.py">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="200" column="35" selection-start-line="197" selection-start-column="20" selection-end-line="200" selection-end-column="35" />
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -535,23 +568,73 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="6" column="32" selection-start-line="1" selection-start-column="16" selection-end-line="6" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZabbixWebMonitor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZabbixWebMonitor3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="163" column="28" selection-start-line="162" selection-start-column="16" selection-end-line="163" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZabbixWebUpdate2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZabbixWebMonitor2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="197" column="31" selection-start-line="197" selection-start-column="31" selection-end-line="197" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZabbixWebUpdate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="246" column="31" selection-start-line="164" selection-start-column="0" selection-end-line="246" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ZabbixWebMonitor3.py">
+    <entry file="file://$PROJECT_DIR$/ZabbixWebUpdate3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46703297">
-          <caret line="347" column="17" selection-start-line="347" selection-start-column="17" selection-end-line="347" selection-end-column="17" />
+        <state vertical-scroll-proportion="2.6208792">
+          <caret line="216" column="26" selection-start-line="216" selection-start-column="26" selection-end-line="216" selection-end-column="26" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

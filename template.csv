@@ -1,1 +1,1 @@
-hostid,*name,delay,retries,agent,*headers,*variables,authentication,http_password,http_user,ssl_cert_file,ssl_key_file,ssl_key_password,verify_host,verify_peer,no,name,url,posts,variables,headers,follow_redirects,timeout,required,status_codes
+hostid,groupid,*name,delay,retries,agent,*headers,*variables,authentication,http_password,http_user,ssl_cert_file,ssl_key_file,ssl_key_password,verify_host,verify_peer,no,name,url,posts,variables,headers,follow_redirects,timeout,required,status_codes

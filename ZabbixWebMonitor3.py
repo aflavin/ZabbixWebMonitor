@@ -246,7 +246,7 @@ def writewebrecord(datacon):
         else:
             try:
                 z.trigger.create(
-                    description=data['*name'] + "failed: {ITEM.VALUE}",
+                    description=data['*name'] + " failed: {ITEM.VALUE}",
                     expression='{' + data['hostid'] + ":web.test.fail[" + data['*name'] + "].last()}>0 and " + \
                                '{' + data['hostid'] + ":web.test.error[" + data['*name'] + "].strlen()}<>0",
                     comment=data['hostid'] + ":web.test.error[" + data['*name'] + "]}",
@@ -324,8 +324,7 @@ if __name__ == '__main__':
             print("Too many failed attempts.")
             sys.exit(2)
     if readcsvfile(list1):
-        for row1 in list1:
-            rowcount1 += 1
+        rowcount1 = len(list1)
         if rowcount1 <= 1:
             print("The imported CSV file must have a header.\nDefault header:")
             print(sorted(default.keys()))
